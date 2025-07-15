@@ -36,8 +36,8 @@ class AppButton extends StatelessWidget {
       onPressed: isLoading ? null : onPressed,
       style: ElevatedButton.styleFrom(
         shape: showBorder
-            ? StadiumBorder(side: BorderSide(width: 1, color: AppColors.colorSecondary))
-            : StadiumBorder(),
+            ? RoundedRectangleBorder(side: BorderSide(width: 1, color: AppColors.colorSecondary))
+            : RoundedRectangleBorder(borderRadius: BorderRadiusGeometry.circular(8)),
         backgroundColor: backgroundColor,
         minimumSize: Size(width, 60.r),
       ),
