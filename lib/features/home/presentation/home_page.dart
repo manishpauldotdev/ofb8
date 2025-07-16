@@ -205,6 +205,68 @@ class HomePage extends StatelessWidget {
                     }),
                   ),
                 ),
+                20.verticalSpace,
+                Text(
+                  'Plan by Month',
+                  style: AppTextStyles.textStylePoppinsSemiBold.copyWith(fontSize: 22.r),
+                ),
+                20.verticalSpace,
+                Center(
+                  child: Wrap(
+                    children: List.generate(12, (index) {
+                      return Container(
+                        height: 90.r,
+                        width: 90.r,
+                        margin: EdgeInsets.only(
+                          right: ((index + 1) % 4 == 0) ? 0 : 10,
+                          bottom: 10,
+                        ).r,
+                        decoration: BoxDecoration(
+                          border: Border.all(width: 1, color: AppColors.colorBlack),
+                          borderRadius: BorderRadius.circular(12).r,
+                        ),
+                        child: FlutterLogo(),
+                      );
+                    }),
+                  ),
+                ),
+                20.verticalSpace,
+                Row(
+                  children: [
+                    Text(
+                      'Explore by State',
+                      style: AppTextStyles.textStylePoppinsSemiBold.copyWith(fontSize: 22.r),
+                    ),
+                    const Spacer(),
+                    Text(
+                      'see all',
+                      style: AppTextStyles.textStylePoppinsSemiBold.copyWith(
+                        fontSize: 14.r,
+                        color: AppColors.colorOrange,
+                      ),
+                    ),
+                  ],
+                ),
+                20.verticalSpace,
+                Center(
+                  child: Wrap(
+                    children: List.generate(4, (index) {
+                      return Container(
+                        height: 90.r,
+                        width: 190.r,
+                        margin: EdgeInsets.only(
+                          right: ((index + 1) % 2 == 0) ? 0 : 10,
+                          bottom: 10,
+                        ).r,
+                        decoration: BoxDecoration(
+                          border: Border.all(width: 1, color: AppColors.colorBlack),
+                          borderRadius: BorderRadius.circular(12).r,
+                        ),
+                        child: FlutterLogo(),
+                      );
+                    }),
+                  ),
+                ),
                 200.verticalSpace,
               ],
             ),
